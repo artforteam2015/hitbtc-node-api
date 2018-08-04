@@ -52,6 +52,15 @@ class WebSocketClient extends EventEmitter {
     })
   }
 
+  subscribeTrades = symbol => {
+    this.subscribe({
+      method: 'subscribeTrades',
+      params: {
+        symbol,
+      },
+    })
+  }
+
   subscribeOrderBook = symbol => {
     this.subscribe({
       method: 'subscribeOrderbook',
